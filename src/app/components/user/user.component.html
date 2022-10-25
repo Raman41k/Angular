@@ -1,0 +1,27 @@
+<div>
+  <h2>
+    {{user.id}} {{user.name}}
+  </h2>
+  <h3>Username: {{user.username}}</h3>
+  <ul>
+    <li>{{user.address.city}}</li>
+    <li>{{user.address.street}}</li>
+    <li>{{user.address.suite}}</li>
+    <li>{{user.address.zipcode}}</li>
+    <li>
+      <ul>
+        <li> {{user.address.geo.lat}}</li>
+        <li> {{user.address.geo.lng}}</li>
+      </ul>
+    </li>
+  </ul>
+  <p>email: {{user.email}}</p>
+  <p>phone: {{user.phone}}</p>
+  <p>website: {{user.website}}</p>
+  <h4>Company:</h4>
+  <ul>
+    <li>{{user.company.name}}</li>
+    <li>{{user.company.catchPhrase}}</li>
+    <li>{{user.company.bs}}</li>
+  </ul>
+</div>

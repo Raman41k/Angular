@@ -1,0 +1,12 @@
+.wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container{
+  width: 33.33%;
+  border: 1px solid silver;
+  padding: 20px;
+  box-sizing: border-box;
+}
