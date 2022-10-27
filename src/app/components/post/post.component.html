@@ -1,0 +1,9 @@
+<div  style="margin-bottom: 30px;border: 1px solid black">
+    <a routerLink="{{post.id}}" [state]="post">
+      {{post.id}}
+      {{post.title}}
+      <br>
+      {{post.body}}
+    </a>
+  <button (click)="getDetails()">Show details</button>
+</div>

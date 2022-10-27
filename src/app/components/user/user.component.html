@@ -1,0 +1,9 @@
+<div style="padding: 10px" >
+  <a routerLink='{{user.id}}' [state]={user}>
+    {{user.id}}.) {{user.name}} {{user.username}}
+    <br>
+    {{user.email}}
+    <br>
+  </a>
+  <button (click)="getDetails()">Show details</button>
+</div>
