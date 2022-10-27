@@ -6,11 +6,12 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppComponent} from './app.component';
 import {MainLayotComponent} from "./layouts";
 import {
+  CommentComponent,
   CommentDetailsComponent,
-  CommentsComponent,
-  HomeComponent,
+  CommentsComponent, HeaderComponent,
+  HomeComponent, PostComponent,
   PostsComponent,
-  PostsDetailsComponent,
+  PostsDetailsComponent, UserComponent,
   UserDetailsComponent,
   UsersComponent
 } from "./components";
