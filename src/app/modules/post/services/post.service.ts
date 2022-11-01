@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {delay, Observable} from "rxjs";
 
 import {IPost} from "../interfaces";
 import {urls} from "../../../configs";
@@ -14,10 +14,10 @@ export class PostService {
   }
 
   getAll(): Observable<IPost[]> {
-    return this.httpClient.get<IPost[]>(urls.posts);
+    return this.httpClient.get<IPost[]>(urls.posts).pipe(delay(2000));
   }
 
   getById(id: number): Observable<IPost> {
-    return this.httpClient.get<IPost>(`${urls.posts}/${id}`)
+    return this.httpClient.get<IPost>(`${urls.posts}/${id}`).pipe(delay(2000));
   }
 }
