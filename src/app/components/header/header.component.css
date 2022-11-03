@@ -1,0 +1,19 @@
+.btn-container{
+  display: flex;
+}
+
+.btn-container > div {
+  padding: 0 5px;
+}
+
+.btn-container > div:hover {
+  cursor: pointer;
+}
+
+.wrapper{
+  justify-content: space-between;
+}
+
+.active{
+  color: sandybrown;
+}
