@@ -20,16 +20,17 @@ export class AuthService {
   login(user: IAuth): Observable<IToken> {
     return this.httpClient.post<IToken>(urls.auth.login, user).pipe(
       tap((tokens) => {
-          this._authUser.next(user.username)
-          this._setTokens(tokens)
-        }
-      )
+        this._authUser.next(user.username)
+        this._setTokens(tokens)
+      })
     )
   }
 
   refresh(refresh: string): Observable<IToken> {
     return this.httpClient.post<IToken>(urls.auth.refresh, {refresh}).pipe(
-      tap((tokens) => this._setTokens(tokens))
+      tap((tokens) => {
+        this._setTokens(tokens)
+      })
     )
   }
 
@@ -37,7 +38,7 @@ export class AuthService {
     return this._authUser.asObservable()
   }
 
-  private _setTokens({refresh, access}: IToken): void {
+  private _setTokens({access, refresh}: IToken): void {
     localStorage.setItem(this._accessTokenKey, access)
     localStorage.setItem(this._refreshTokenKey, refresh)
   }
